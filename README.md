@@ -24,7 +24,7 @@ DROP EVENT IF EXISTS update_live_user_counts;
 
 DELIMITER $$
  
-# -- Create the event to update live_user_counts table every minute
+#  Create the event to update live_user_counts table every minute
 
 CREATE EVENT update_live_user_counts
 
