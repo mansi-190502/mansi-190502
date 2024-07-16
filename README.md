@@ -14,8 +14,9 @@ CREATE TABLE IF NOT EXISTS matomo.live_user_counts (
     PRIMARY KEY (name, time)
 
 );
+```
 
-`This is for if the event is already exists then it will drop the users.`
+# This is for if the event is already exists then it will drop the users.`
 
 --  Drop the event if it already exists
 
@@ -85,7 +86,7 @@ DELIMITER ;
  
  
 ------------------------------------------------------------------------------
-
+# This is when table is not exists. 
 CREATE TABLE IF NOT EXISTS rum_report (
 
     date DATE,
@@ -109,7 +110,7 @@ CREATE TABLE IF NOT EXISTS rum_report (
  
 DELIMITER $$
  
--- Enable event scheduling if it's not already enabled
+#  Enable event scheduling if it's not already enabled
 
 SET GLOBAL event_scheduler = ON$$
  
@@ -125,7 +126,7 @@ DO
 
 BEGIN
 
-    -- Your SQL script here
+#    Your SQL script here
 
     INSERT INTO rum_report(date, name, unique_user_count, total_visitor_count, bounce_rate, average_visit_time_seconds, average_visit_interaction)
 
@@ -156,7 +157,7 @@ BEGIN
     GROUP BY 
 
         date, name;
-```
+
 END$$
  
 DELIMITER ;
