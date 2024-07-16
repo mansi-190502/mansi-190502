@@ -1,3 +1,4 @@
+# This is for creation of matoma live user counts.
 To get data of active user  
 
 ------------------------------------------------------------------------------
@@ -13,15 +14,16 @@ CREATE TABLE IF NOT EXISTS matomo.live_user_counts (
     PRIMARY KEY (name, time)
 
 );
- 
- 
--- Drop the event if it already exists
+
+`This is for if the event is already exists then it will drop the users.`
+
+--  Drop the event if it already exists
 
 DROP EVENT IF EXISTS update_live_user_counts;
 
 DELIMITER $$
  
--- Create the event to update live_user_counts table every minute
+# -- Create the event to update live_user_counts table every minute
 
 CREATE EVENT update_live_user_counts
 
